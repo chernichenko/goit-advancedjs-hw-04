@@ -29,7 +29,7 @@ form.addEventListener('submit', async (event) => {
   totalHits = total;  // Update the totalHits variable
   hideLoader();
   loader.style.display = 'none';
-  loadMoreButton.style.display = 'block';
+  loadMoreButton.style.display = currentPage * 15 >= totalHits ? 'none' : 'block';
 });
 
 loadMoreButton.addEventListener('click', async () => {
